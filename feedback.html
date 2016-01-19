@@ -156,7 +156,7 @@ Please consider reviewing the applications of:
 </table>
 
 <script>
-var ref = new Firebase("https://feedback-fire-team-1.firebaseio.com/#-K7o14V0-0uB9YqUBha3|0aaffbd77e09bf49880440cc68323296");
+var ref = new Firebase("https://feedback-fire-team-1.firebaseio.com/");
 ref.authWithOAuthPopup("github", function(error, authData) {
   if (error) {
     console.log("Login Failed!", error);
@@ -170,7 +170,7 @@ ref.authWithOAuthPopup("github", function(error, authData) {
     $scope.newuser = {};
     
     // Here is where you update your Firebase URL. 
-    var theFirebaseURL = "https://feedback-fire-team-1.firebaseio.com/#-K7o14V0-0uB9YqUBha3|0aaffbd77e09bf49880440cc68323296/";
+    var theFirebaseURL = "https://feedback-fire-team-1.firebaseio.com/";
     
     var ref = new Firebase(theFirebaseURL);
     $scope.users = $firebase(ref.child("feedback")).$asArray(); 
