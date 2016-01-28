@@ -98,8 +98,8 @@ $(document).ready(function() {
     $scope.addUser = function(name, email, password) {
       var ref = new Firebase("https://foodshareuser.firebaseio.com/");
       var sync = $firebase(ref);
-      $scope.user = sync.$asArray();
-      $scope.user.$add({
+      $scope.users = sync.$asArray();
+      $scope.users.$add({
         name: name,
         email: email,
         password: password
@@ -108,8 +108,8 @@ $(document).ready(function() {
     $scope.addVendor = function(name, email, desc, password) {
       var ref = new Firebase("https://foodsharevendor.firebaseio.com/");
       var sync = $firebase(ref);
-      $scope.user = sync.$asArray();
-      $scope.vendor.$add({
+      $scope.vendors = sync.$asArray();
+      $scope.vendors.$add({
         name: name,
         email: email,
         desc: desc,
