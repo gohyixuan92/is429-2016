@@ -49,25 +49,26 @@ $(document).ready(function() {
 <div class="tabs-content">
   <div class="content active" id="user">
     <h3>User Sign Up</h3>
-    <form ng-submit="addUser(name, email, password)">
+    <form ng-submit="addUser(name, email, password)" class="medium-5 columns">
   <label for="name">Name
-  <input type="text" placeholder="Name" id="name">
+  <input type="text" placeholder="Name" id="name" ng-model="name">
 </label>
   <label for="email">Email:
-  <input type="text" placeholder="Email" id="email">
+  <input type="text" placeholder="Email" id="email" ng-model="email">
 </label>
   <label for="password">Password:
-  <input type="text" placeholder="Password" id="password">
+  <input type="password" placeholder="Password" id="password" ng-model="password">
 </label>
   <label for="confirmPassword">Confirm Password:
-  <input type="text" placeholder="Confirm Password">
+  <input type="password" placeholder="Confirm Password" ng-model="confirmPassword" ng-change="checkPassword(confirmPassword)">
+  <small id="passwordError"></small>
 </label>
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" class="button">
 </form>
   </div>
   <div class="content" id="vendor">
     <h3>Vendor Sign Up</h3>
-    <form  ng-submit="addVendor(nameText, newMessageText)">
+    <form  ng-submit="addVendor(nameText, newMessageText)" class="medium-5 columns">
       <input type="submit" value="Submit">
     </form>
   </div>
@@ -82,7 +83,7 @@ $(document).ready(function() {
     $scope.addUser = function(name, email, password) {
       var ref = new Firebase("https://foodshareuser.firebaseio.com/");
       var sync = $firebase(ref);
-      $scope.user = sync.$asArray();
+      //$scope.user = sync.$asArray();
       $scope.user.$add({
         name: name,
         email: email,
@@ -92,12 +93,43 @@ $(document).ready(function() {
     $scope.addVendor = function(name, email, password) {
       var ref = new Firebase("https://foodsharevendor.firebaseio.com/");
       var sync = $firebase(ref);
-      $scope.user = sync.$asArray();
+      //$scope.user = sync.$asArray();
       $scope.user.$add({
         name: name,
         email: email,
         password: password
       });
+    }
+    $scope.checkPassword = function(confirmPassword){
+      var password = document.getElementById("password").value;
+      console.log("confirm = "+confirmPassword);
+      console.log("password = "+password);
+      if(password==confirmPassword){
+        document.getElementById("passwordError").className="";
+        document.getElementById("passwordError").innerHTML="";
+      }
+      else{
+        if(confirmPassword==""){
+          document.getElementById("passwordError").className="";
+          document.getElementById("passwordError").innerHTML="";
+        }
+        else{
+          document.getElementById("passwordError").className="error";
+          document.getElementById("passwordError").innerHTML="Password does not match";
+        }
+
+      }
+      if(password==""){
+        if(confirmPassword==""){
+          document.getElementById("passwordError").className="";
+          document.getElementById("passwordError").innerHTML="";
+        }
+        else{
+          document.getElementById("passwordError").className="error";
+          document.getElementById("passwordError").innerHTML="Password is empty";
+        }
+
+      }
     }
   });
 </script>
