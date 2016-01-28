@@ -62,12 +62,10 @@ $(document).ready(function() {
 <script>
   var app = angular.module("login", ["firebase"]);
 
-  app.controller("loginCtrl", function($scope, $firebaseArray) {
+  app.controller("loginCtrl", function($scope, $firebaseArray, $firebaseAuth) {
     $scope.login = function(username, password){
       var userLoginTry = userLogin(username, password);
       var vendorLoginTry = vendorLogin(username, password);
-      console.log("userLoginTry = "+ userLoginTry);
-      console.log("vendorLoginTry = "+vendorLoginTry);
       if(userLoginTry==null&&vendorLoginTry!=null){
         //send to vendor home page
         console.log("user!!");
@@ -84,34 +82,33 @@ $(document).ready(function() {
     function userLogin(username, password) {
       console.log("userLogin called");
       var ref = new Firebase("https://foodshareuser.firebaseio.com/");
-      var users = $firebaseArray(ref);
-      console.log("users length = "+users.length);
-      var loginUser = null;
-      for(var i = 0; i < users.length; i++){
-        var user = users[i];
-        var email = user.email;
-        console.log("user email = "+email);
-        var dbpassword = user.password;
-        if(username==email&&password==dbpassword){
-          loginUser = {email:email, type:"user"};
-        }
-      }
-      return loginUser;
+      //var users = $firebaseArray(ref);
+     var authObj = $firebaseAuth(ref);
+     authObj.$authWithPassword({
+  email: username,
+  password: password
+}).then(function(authData) {
+  console.log("Logged in as:", authData.uid);
+  return authData;
+}).catch(function(error) {
+  console.error("Authentication failed:", error);
+  return null;
+});
     }
     function vendorLogin(username, password) {
       console.log("vendorLogin called");
       var ref = new Firebase("https://foodsharevendor.firebaseio.com/");
-      var vendors = $firebaseArray(ref);
-      var loginUser = null;
-      for(var i = 0; i < vendors.length; i++){
-        var vendor = vendors[i];
-        var email = vendor.email;
-        var dbpassword = vendor.password;
-        if(username==email&&password==dbpassword){
-          loginUser = {email:email, type:"user"};
-        }
-      }
-      return loginUser;
+      var authObj = $firebaseAuth(ref);
+      authObj.$authWithPassword({
+   email: username,
+   password: password
+ }).then(function(authData) {
+   console.log("Logged in as:", authData.uid);
+   return authData;
+ }).catch(function(error) {
+   console.error("Authentication failed:", error);
+   return null;
+ });
     }
   });
 </script>
