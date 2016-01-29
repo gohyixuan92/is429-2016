@@ -12,6 +12,19 @@
         $('#slider').nivoSlider();
     });
     </script>
+    <script>
+    // var user = {
+    //   email:null
+    // };
+    var sessionStorage = Window.sessionStorage;
+    var userAuth = sessionStorage.getItem('user');
+    if(userAuth==null||userAuth.email==null){
+      window.location.replace("./login.html");
+    }
+    else{
+      document.getElementById("user").innerHTML = "Hi!"+userAuth.email;
+    }
+    </script>
 
 </head>
 <body>
@@ -23,6 +36,7 @@
           <a href="#"><img src="./images/foodLoveLogo.png" width="60%" height="60%"></a>
         <div id="navcontainer">
             <ul id="navlist">
+              <li><p id="user"></p></li>
                 <li id="active"><a href="#">Home</a></li>
                 <li><a href="#">Order</a></li>
                 <li><a href="#">Profile</a></li>
