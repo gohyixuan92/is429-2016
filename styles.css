@@ -375,7 +375,7 @@ a.nivo-nextNav {
     height: 42px;
     margin-top: 7px;
 }
-.button {
+/*.button {
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 10px 10px 10px 10px;
     color: #FBC00C;
@@ -388,7 +388,7 @@ a.nivo-nextNav {
     text-align: center;
     text-decoration: none;
     vertical-align: baseline;
-}
+}*/
 .button:active {
     position: relative;
     top: 1px;
@@ -617,4 +617,3 @@ ul#navlist {
 #content { padding-top:20px; }
 
 .addOrderBtn {background-color: #FFA500; font-size: 14px;}
-
