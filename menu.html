@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>FoodLove</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>FoodLove</title>
 
   <link rel="stylesheet" href="styles.css" type="text/css" />
   <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
@@ -10,40 +11,55 @@
   <script src="js/jquery.slide.js" type="text/javascript"></script>
   <script src="js/jquery-func.js" type="text/javascript"></script>
 </head>
-  <body>
-<div id="container">
-<div id="inner">
 
- <header>
-        <h1><img src="./images/foodLoveLogo.png" width="80%" height="80%"></h1>
+<body>
+  <div id="container">
+    <div id="inner">
+
+      <header>
+        <h1>
+          <img src="./images/foodLoveLogo.png" width="80%" height="80%">
+        </h1>
         <div id="header">
-        <div id="navcontainer">
+          <div id="navcontainer">
             <ul id="navlist">
-                <li><a href="#">Home</a></li>
-                <li id="active"><a href="#">Dining</a></li>
-                <li><a href="#">Order</a></li>
-                <li><a href="#">Profile</a></li>
+              <li><a href="#">Home</a></li>
+              <li id="active"><a href="#">Dining</a></li>
+              <li><a href="#">Order</a></li>
+              <li><a href="#">Profile</a></li>
             </ul>
+          </div>
+
+          <div class="clear"></div>
         </div>
+      </header>
 
-         <div class="clear"></div>
-    </div>
-    </header>
-
-<!-- <div id="content-bottom"> -->
-    <!-- Content -->
-    <!-- <div id="content"> -->
+      <!-- <div id="content-bottom"> -->
+      <!-- Content -->
+      <!-- <div id="content"> -->
       <!-- Tabs -->
       <div class="tabs">
         <ul>
-          <li><a href="#" class="active"><span>Appetizers</span></a></li>
-          <li><a href="#"><span>Mains</span></a></li>
-          <li><a href="#" class="red"><span>Beverages</span></a></li>
+          <li>
+            <a href="#" class="active">
+              <span>Appetizers</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Mains</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="red">
+              <span>Beverages</span>
+            </a>
+          </li>
         </ul>
       </div>
       <!-- Tabs -->
       <!-- Container -->
-      <div id="container">
+      <div>
         <div class="tabbed">
           <!-- First Tab Content -->
           <div class="tab-content" style="display:block;">
@@ -51,87 +67,132 @@
               <div class="cl">&nbsp;</div>
               <ul>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image1.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image1.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Tom Yam Popcorn Squid Salad</h4>
-                   Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
+                  Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
 
-                  <p class="price">Price: <strong>$ 53</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 53</strong>
+                  </p>
                   <form action="#" method="post">
-                    <div><label for="size">Portion:
-                      <select name="size" id="size">
-                        <option>Half</option>
-                        <option>Normal</option>
-                      </select></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                      <label for="size">Portion:
+                        <select name="size" id="size">
+                          <option>Half</option>
+                          <option>Normal</option>
+                        </select>
+                      </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image2.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image2.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Mozzarella Cheese Sticks</h4>
-                   Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
+                  Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
 
-                  <p class="price">Price: <strong>$ 53</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 53</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><label for="size">Portion:
-                      <select name="size" id="size">
-                        <option>Half</option>
-                        <option>Normal</option>
-                      </select></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                      <label for="size">Portion:
+                        <select name="size" id="size">
+                          <option>Half</option>
+                          <option>Normal</option>
+                        </select>
+                      </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image3.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image3.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Clam Chowder</h4>
-                   Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
+                  Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
 
-                  <p class="price">Price: <strong>$ 53</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 53</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><label for="size">Portion:
-                      <select name="size" id="size">
-                        <option>Half</option>
-                        <option>Normal</option>
-                      </select></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                      <label for="size">Portion:
+                        <select name="size" id="size">
+                          <option>Half</option>
+                          <option>Normal</option>
+                        </select>
+                      </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image4.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image4.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Southern Style Chicken Waffle</h4>
-                   Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
+                  Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
 
-                  <p class="price">Price: <strong>$ 53</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 53</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><label for="size">Portion:
-                      <select name="size" id="size">
-                        <option>Half</option>
-                        <option>Normal</option>
-                      </select></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                      <label for="size">Portion:
+                        <select name="size" id="size">
+                          <option>Half</option>
+                          <option>Normal</option>
+                        </select>
+                      </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image5.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image5.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Hawaiian Pizza</h4>
-                   Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
+                  Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
 
-                  <p class="price">Price: <strong>$ 53</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 53</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><label for="size">Portion:
-                      <select name="size" id="size">
-                        <option>Half</option>
-                        <option>Normal</option>
-                      </select></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                      <label for="size">Portion:
+                        <select name="size" id="size">
+                          <option>Half</option>
+                          <option>Normal</option>
+                        </select>
+                      </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
               </ul>
@@ -145,54 +206,81 @@
               <div class="cl">&nbsp;</div>
               <ul>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image7.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image7.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Ribeye Steak</h4>
-                   Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
+                  Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
 
-                  <p class="price">Price: <strong>$ 20.90</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 20.90</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><label for="size">Portion:
-                      <select name="size" id="size">
-                        <option>Half</option>
-                        <option>Normal</option>
-                      </select></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                      <label for="size">Portion:
+                        <select name="size" id="size">
+                          <option>Half</option>
+                          <option>Normal</option>
+                        </select>
+                      </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image8.jpg" alt="" /></a> </div>
-                   <h4>Chili Fish Pasta</h4>
-                   Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image8.jpg" alt="" />
+                    </a>
+                  </div>
+                  <h4>Chili Fish Pasta</h4>
+                  Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
 
-                  <p class="price">Price: <strong>$ 20.90</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 20.90</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><label for="size">Portion:
-                      <select name="size" id="size">
-                        <option>Half</option>
-                        <option>Normal</option>
-                      </select></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                      <label for="size">Portion:
+                        <select name="size" id="size">
+                          <option>Half</option>
+                          <option>Normal</option>
+                        </select>
+                      </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image9.jpg" alt="" /></a> </div>
-                   <h4>Claypot Spicy Laksa</h4>
-                   Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image9.jpg" alt="" />
+                    </a>
+                  </div>
+                  <h4>Claypot Spicy Laksa</h4>
+                  Mix of crisp lettuce, Carrots, juicy cherry tomatoes, olives and succulent fried squid heads topped off with a refreshing Thai Tom Yam dressing
 
-                  <p class="price">Price: <strong>$ 20.90</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 20.90</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><label for="size">Portion:
-                      <select name="size" id="size">
-                        <option>Half</option>
-                        <option>Normal</option>
-                      </select></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                      <label for="size">Portion:
+                        <select name="size" id="size">
+                          <option>Half</option>
+                          <option>Normal</option>
+                        </select>
+                      </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
               </ul>
@@ -206,47 +294,79 @@
               <div class="cl">&nbsp;</div>
               <ul>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image6.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image6.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Hot Coffee</h4>
                   Milk-based espresso drinks, but it also tastes great as a pure espresso.
 
-                  <p class="price">Price: <strong>$ 6.50</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 6.50</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                    <div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image6.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image6.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Hot Coffee</h4>
                   Milk-based espresso drinks, but it also tastes great as a pure espresso.
 
-                  <p class="price">Price: <strong>$ 6.50</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 6.50</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                    <div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image6.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image6.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Hot Coffee</h4>
                   Milk-based espresso drinks, but it also tastes great as a pure espresso.
 
-                  <p class="price">Price: <strong>$ 6.50</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 6.50</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                    <div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
                 <li>
-                  <div class="image"> <a href="#"><img src="images/image6.jpg" alt="" /></a> </div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="images/image6.jpg" alt="" />
+                    </a>
+                  </div>
                   <h4>Hot Coffee</h4>
                   Milk-based espresso drinks, but it also tastes great as a pure espresso.
 
-                  <p class="price">Price: <strong>$ 6.50</strong></p>
+                  <p class="price">Price:
+                    <strong>$ 6.50</strong>
+                  </p>
 
                   <form action="#" method="post">
-                    <div><input class="addOrderBtn" type="submit" value="Add Order" /></div>
+                    <div>
+                      <input class="addOrderBtn" type="submit" value="Add Order" />
+                    </div>
                   </form>
                 </li>
               </ul>
@@ -255,20 +375,27 @@
           </div>
           <!-- End Third Tab Content -->
         </div>
-     </div>
-      <!-- End Container -->
+      </div>
+
+      <div class="footer">
+        <p>
+          <a href="team20.html">
+            <abbr title="Team 20">Team 20</abbr>
+          </a> | Team 1 |
+          <a href="team2.html">
+            <abbr title="Team 2">Team 2</abbr>
+          </a>
+        </p>
+      </div>
     </div>
+    <!-- End inner -->
     <!-- End Content -->
 
+  </div>
+  <!-- End Container -->
+  <!-- </div> -->
+  <!-- </div> -->
 
-<!-- <div class="footer">
-            <p>
-                <a href="team20.html"><abbr title="Team 20">Team 20</abbr></a> | Team 1  | <a href="team2.html"><abbr title="Team 2">Team 2</abbr></a>
-            </p>
-         </div> -->
-</div>
-<!-- </div> -->
-<!-- </div> -->
+</body>
 
-  </body>
-  </html>
+</html>
