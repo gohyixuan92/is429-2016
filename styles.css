@@ -398,6 +398,9 @@ a.nivo-nextNav {
     font-size: 16px;
     padding: 0.8em 1.4em 0.7em;
 }
+#greeting {
+  float: right;
+}
 #main {
     background: none repeat scroll 0 0 transparent;
     margin: 0 auto;

@@ -108,13 +108,9 @@ $(document).ready(function() {
   password: password
 }).then(function(authData) {
   console.log("Logged in as:", authData.uid);
-  var sessionStorage = Window.sessionStorage;
-  var user = {
-    email: authData.email
-  };
-  sessionStorage.setItem('user', user);
-  //return authData;
-  window.location.replace("http://gohyixuan92.github.io/is429-2016/index.html");
+  console.log('password = '+authData.password.email);
+  window.sessionStorage.user = authData.password.email;
+  window.location.replace("./index.html");
 }).catch(function(error) {
   console.error("Authentication failed:", error);
   return null;
@@ -131,11 +127,9 @@ $(document).ready(function() {
    console.log("Logged in as:", authData.uid);
    //return authData;
    //var sessionStorage = Window.sessionStorage;
-   var user = {
-     email: authData.email
-   };
-   Window.localStorage.setItem('user', authData.email);
-   window.location.replace("http://gohyixuan92.github.io/is429-2016/index.html");
+   console.log('user = '+authData);
+   window.sessionStorage.user = authData.password.email;
+   window.location.replace("./index.html");
  }).catch(function(error) {
    console.error("Authentication failed:", error);
    return null;

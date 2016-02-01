@@ -16,13 +16,15 @@
     // var user = {
     //   email:null
     // };
-    var sessionStorage = Window.localStorage;
-    var userAuth = sessionStorage.getItem('user');
-    if(userAuth==null||userAuth.email==null){
+    // var sessionStorage = Window.sessionStorage;
+    var greeting = "";
+    var user = window.sessionStorage.user;
+    console.log('user = '+user);
+    if(user==null){
       window.location.replace("./login.html");
     }
     else{
-      document.getElementById("user").innerHTML = "Hi!"+userAuth.email;
+      greeting = "Hi! "+user;
     }
     </script>
 
@@ -36,12 +38,17 @@
           <a href="#"><img src="./images/foodLoveLogo.png" width="60%" height="60%"></a>
         <div id="navcontainer">
             <ul id="navlist">
-              <li><p id="user"></p></li>
                 <li id="active"><a href="#">Home</a></li>
                 <li><a href="#">Order</a></li>
                 <li><a href="#">Profile</a></li>
             </ul>
         </div>
+        <div>
+        <h2 id="greeting"></h2>
+        </div>
+        <script>
+        document.getElementById('greeting').innerHTML = greeting;
+        </script>
 
          <div class="clear"></div>
     </div>
