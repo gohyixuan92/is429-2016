@@ -134,13 +134,8 @@ $(document).ready(function() {
    password: password
  });
 }).then(function(authData) {
- console.log("Logged in as:", authData.uid);
- var sessionStorage = Window.sessionStorage;
- var user = {
-   email: authData.email
- };
- sessionStorage.setItem('user', user);
- window.location.replace("http://gohyixuan92.github.io/is429-2016/index.html");
+  window.sessionStorage.user = authData.password.email;
+  window.location.replace("./index.html");
 }).catch(function(error) {
  console.error("Error: ", error);
 });
