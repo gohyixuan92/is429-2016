@@ -182,6 +182,7 @@ li ol, li ul {
 #header {
     margin: 10px auto 0;
     padding: 10px 15px;
+    background-color: #F2F5A9;
 }
 #header h1 a {
     color: #FFFFFF;
