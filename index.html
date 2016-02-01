@@ -16,7 +16,7 @@
     // var user = {
     //   email:null
     // };
-    var sessionStorage = Window.sessionStorage;
+    var sessionStorage = Window.localStorage;
     var userAuth = sessionStorage.getItem('user');
     if(userAuth==null||userAuth.email==null){
       window.location.replace("./login.html");

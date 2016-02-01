@@ -134,7 +134,7 @@ $(document).ready(function() {
    var user = {
      email: authData.email
    };
-   Window.sessionStorage.setItem('user', authData.email);
+   Window.localStorage.setItem('user', authData.email);
    window.location.replace("http://gohyixuan92.github.io/is429-2016/index.html");
  }).catch(function(error) {
    console.error("Authentication failed:", error);
