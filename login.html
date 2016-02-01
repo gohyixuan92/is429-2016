@@ -26,6 +26,12 @@ $(document).ready(function() {
     $(document).foundation();
 })
 </script>
+<script>
+var user = window.sessionStorage.user;
+if(user!=null){
+  window.location.replace("./index.html");
+}
+</script>
 </head>
 
 <body>
@@ -79,21 +85,16 @@ $(document).ready(function() {
         vendorLogin(username, password)
       ])
       .then((tries) => {
-        // var [userLoginTry,  vendorLoginTry] = tries;
-        // if(userLoginTry==null&&vendorLoginTry!=null){
-        //   //send to vendor home page
-        //   console.log("user!!");
-        //
-        // }
-        // elseif (userLoginTry!=null&&vendorLoginTry==null) {
-        //   //send to user home page
-        //   console.log("vendor!!");
-        //   window.location = "http://gohyixuan92.github.io/is429-2016/index.html";
-        // }
-        // else{
+        var user = window.sessionStorage.user;
+        if(user==null){
           document.getElementById("loginError").className="error";
           document.getElementById("loginError").innerHTML="Username/password incorrect";
-        // }
+
+        }else{
+          window.location.replace("./index.html");
+        }
+
+
       })
 
 
