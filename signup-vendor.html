@@ -113,6 +113,8 @@ $(document).ready(function() {
   });
 }).then(function(authData) {
   console.log("Logged in as:", authData.uid);
+  window.sessionStorage.user = authData.password.email;
+  window.location.replace("./index.html");
 }).catch(function(error) {
   console.error("Error: ", error);
 });
